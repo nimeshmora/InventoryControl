@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?language javascript?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" styleClass="signroot" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="ruwanbook.SigninController">
+  <children>
+    <GridPane alignment="CENTER" layoutX="256.0" layoutY="95.0">
+      <children>
+        <!--        <Label text="Sign Up " id="welcome-text" textFill="WHITE">
+          <font>
+            <Font size="18.0" />
+          </font>
+        </Label>-->
+        <Label text="Username:" textFill="WHITE" GridPane.rowIndex="0" />
+        <TextField fx:id="tf_username" GridPane.columnIndex="1" GridPane.rowIndex="0" />
+        <Label text="Password:" textFill="WHITE" GridPane.rowIndex="1" />
+        <PasswordField fx:id="tf_password" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+        <Label text="Name:" textFill="WHITE" GridPane.rowIndex="2" />
+        <TextField fx:id="tf_name" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+        <Label text="Address:" textFill="WHITE" GridPane.rowIndex="3" />
+        <TextField fx:id="tf_address" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+        <Label text="Phone:" textFill="WHITE" GridPane.rowIndex="4" />
+        <TextField fx:id="tf_phone" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+        <Button fx:id="btn_signin" mnemonicParsing="false" onAction="#loginpage" prefHeight="25.0" prefWidth="66.0" text="Sign Up" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+        <Button mnemonicParsing="false" onMouseClicked="#backToLogIn" prefHeight="25.0" prefWidth="66.0" text="Back" GridPane.columnIndex="0" GridPane.rowIndex="5" />
+      </children>
+      <columnConstraints>
+        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+      </columnConstraints>
+      <padding>
+        <Insets bottom="10.0" left="25.0" right="25.0" top="25.0" />
+      </padding>
+      <rowConstraints>
+        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+      </rowConstraints>
+    </GridPane>
+    <Text id="welcome-text" layoutX="279.0" layoutY="85.0" text="Sign Up" />
+  </children>
+  <stylesheets>
+    <URL value="@Login.css" />
+  </stylesheets>
+</AnchorPane>

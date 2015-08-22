@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" styleClass="signroot" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="ruwanbook.CustomerController">
+  <children>
+    <AnchorPane prefHeight="-1.0" prefWidth="-1.0" AnchorPane.bottomAnchor="-2.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+      <children>
+        <Button blendMode="MULTIPLY" layoutX="14.0" layoutY="401.0" mnemonicParsing="false" opacity="0.0" prefHeight="46.0" prefWidth="57.0" style="-fx-background-color: #0099FF;">
+          <effect>
+            <InnerShadow />
+          </effect>
+        </Button>
+        <ImageView fitHeight="37.0" fitWidth="42.0" layoutX="38.0" layoutY="410.0" onMouseClicked="#backToMainMenu" opacity="0.95" pickOnBounds="true" preserveRatio="true">
+          <image>
+            <Image url="@../Images/back_2.png" />
+          </image>
+        </ImageView>
+        <Text id="welcome-text" layoutX="27.0" layoutY="75.0" text="Add Customers" />
+        <!--        <Label layoutX="24.0" layoutY="36.0" text="Add Customers">
+          <font>
+            <Font name="System Bold" size="21.0" />
+          </font>
+        </Label>-->
+        <HBox id="HBox" alignment="CENTER" layoutX="38.0" layoutY="375.0" spacing="20.0">
+          <children>
+            <Button mnemonicParsing="false" onAction="#add" prefHeight="25.0" prefWidth="73.0" text="Add" />
+            <Button mnemonicParsing="false" onAction="#update" prefHeight="25.0" prefWidth="73.0" text="Update" />
+            <Button mnemonicParsing="false" onAction="#delete" prefHeight="25.0" prefWidth="66.0" text="Delete" />
+          </children>
+        </HBox>
+        <Text fx:id="actiontarget" layoutX="504.0" layoutY="429.0" strokeType="OUTSIDE" strokeWidth="0.0" />
+        <GridPane layoutX="27.0" layoutY="113.0" prefHeight="230.0" prefWidth="247.0">
+          <children>
+            <Label text="Customer ID" GridPane.columnIndex="0" GridPane.rowIndex="0">
+              <font>
+                <Font size="13.0" fx:id="x1" />
+              </font>
+            </Label>
+            <Label font="$x1" text="Customer Name" GridPane.columnIndex="0" GridPane.rowIndex="1" />
+            <Label font="$x1" text="Address" GridPane.columnIndex="0" GridPane.rowIndex="2" />
+            <Label font="$x1" text="Phone" GridPane.columnIndex="0" GridPane.rowIndex="3" />
+            <TextField fx:id="tf_cusid" prefHeight="25.0" prefWidth="134.0" GridPane.columnIndex="1" GridPane.rowIndex="0" />
+            <TextField fx:id="tf_cusname" prefHeight="25.0" prefWidth="134.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <TextField fx:id="tf_cusaddress" prefHeight="73.0" prefWidth="134.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <TextField fx:id="tf_cusphone" prefHeight="25.0" prefWidth="134.0" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+          </children>
+          <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          </columnConstraints>
+          <rowConstraints>
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          </rowConstraints>
+        </GridPane>
+      </children>
+    </AnchorPane>
+  </children>
+  <stylesheets>
+    <URL value="@Login.css" />
+  </stylesheets>
+</AnchorPane>

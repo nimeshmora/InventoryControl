@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?language javascript?>
+<!--<AnchorPane id="AnchorPane" prefHeight="200" prefWidth="320" xmlns:fx="http://javafx.com/fxml" fx:controller="ruwanbook.MainController">
+    <children>
+        <Button layoutX="126" layoutY="90" text="Click Me!" onAction="#handleButtonAction" fx:id="button" />
+        <Label layoutX="126" layoutY="120" minHeight="16" minWidth="69" fx:id="label" />
+    </children>
+</AnchorPane>-->
+
+<GridPane alignment="CENTER" hgap="10.0" styleClass="signroot" vgap="10.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="ruwanbook.MainController">
+  <padding>
+    <Insets bottom="10.0" left="25.0" right="25.0" top="25.0" />
+  </padding>
+  <!-- 
+//js
+   <fx:script>
+        function handleSubmitButtonAction(){
+            actiontarget.setText("Sign in button pressed");
+        }
+    </fx:script>-->
+  <Text id="welcome-text" text="Welcome" GridPane.columnIndex="0" GridPane.columnSpan="2" GridPane.rowIndex="0" />
+  <Label text="User Name:" GridPane.columnIndex="0" GridPane.rowIndex="1" />
+  <TextField fx:id="usernameField" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+  <Label text="Password:" GridPane.columnIndex="0" GridPane.rowIndex="2" />
+  <PasswordField fx:id="passwordField" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+  <HBox alignment="BOTTOM_RIGHT" spacing="10.0" GridPane.columnIndex="1" GridPane.rowIndex="4">
+    <Button onAction="#handleSubmitButtonAction" prefHeight="25.0" prefWidth="66.0" text="Log In" />
+  </HBox>
+  <!--   
+//js code
+ <HBox spacing="10" alignment="bottom_right" 
+            GridPane.columnIndex="1" GridPane.rowIndex="4">
+            <Button text="Sign In"     
+            onAction="handleSubmitButtonAction(event);"/>
+    </HBox>-->
+  <Text fx:id="actiontarget" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+  <stylesheets>
+    <URL value="@Login.css" />
+  </stylesheets>
+</GridPane>
