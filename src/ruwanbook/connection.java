@@ -13,7 +13,7 @@ public class connection {
             Class.forName("org.apache.derby.jdbc.ClientDriver");
             //DriverManager.registerDriver(new org.apache.derby.jdbc.EmbeddedDriver());
             System.out.println("ok1");
-            String dbURL = "jdbc:derby://localhost:1527/InventoryControl;create=true";
+            String dbURL = "jdbc:derby://localhost:1527/InventoryManagement;create=true";
             //Connect and create a database if not exist in the memory:
             String user = "APP";
             String password = null;

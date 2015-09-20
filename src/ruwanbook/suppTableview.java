@@ -1,3 +1,8 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
 package ruwanbook;
 
 /**
@@ -10,6 +15,7 @@ import java.sql.SQLException;
 import java.sql.Statement;
 import javafx.application.Application;
 import static javafx.application.Application.launch;
+import javafx.beans.property.SimpleStringProperty;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
@@ -28,9 +34,9 @@ import javafx.stage.Stage;
 
 public class suppTableview extends Application {
     
-    private final TableView<Details> table = new TableView<>();
+    private final TableView<SupplierDetails> table = new TableView<>();
    // private final ObservableList<Person> data =FXCollections.observableArrayList(new Person("A", "B"));
-    private  ObservableList<Details> data=FXCollections.observableArrayList(new Details("A", "B","C"));
+   // private  ObservableList<ProductDetails> data=FXCollections.observableArrayList(new ProductDetails("A", "B","C","D","E",7,8));
     final HBox hb = new HBox();
     
     @Override
@@ -59,8 +65,11 @@ public class suppTableview extends Application {
         fifthNameCol.setMinWidth(100);
         fifthNameCol.setCellValueFactory(new PropertyValueFactory<>("Company"));
  
-        table.setItems(data);
+      //  table.setItems(data);
         table.getColumns().addAll(firstNameCol, lastNameCol,addressCol,fourthNameCol,fifthNameCol);
+        
+        //data.add(new Details("qq", "aa", "c","dd"));
+        
         
         //data =FXCollections.observableArrayList(new Person("A", "B"));
         
@@ -79,7 +88,15 @@ public class suppTableview extends Application {
 //                    System.out.print(rs.getString(i)+"    ");
                   //  data =FXCollections.observableArrayList(new Person("A", "B"));
                     //System.out.println(i);
-                   // data.add(new Details(rs.getString(1), rs.getString(2), rs.getString(3)));
+                String ID = rs.getString(1);
+                String name = rs.getString(2);
+                String address = rs.getString(3);
+                String phone = rs.getString(4);
+                String company = rs.getString(5);
+                System.out.println(address);
+                System.out.println(phone);
+               // data.add(new ProductDetails(ID, name, address,phone,company));
+                  //  data.add(new Details(rs.getString(1), rs.getString(2), rs.getString(3)));
                     
 //                }
 //                System.out.println("");
@@ -93,7 +110,7 @@ public class suppTableview extends Application {
 
             @Override
             public void handle(ActionEvent t) {
-               data.add(new Details("Z","X","B"));
+              // data.add(new ProductDetails("Z","X","B","C","f"));
             }
         });
  

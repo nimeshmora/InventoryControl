@@ -66,6 +66,7 @@
             <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
           </rowConstraints>
         </GridPane>
+        <Button layoutX="448.0" layoutY="220.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="98.0" onMouseClicked="#SupplierDetails" text="Suppliers" />
       </children>
     </AnchorPane>
   </children>

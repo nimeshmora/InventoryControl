@@ -1,10 +1,14 @@
 package ruwanbook;
 
+import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.fxml.JavaFXBuilderFactory;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.TextField;
@@ -133,6 +137,32 @@ public class ProductController implements Initializable {
             RuwanBook.getStage().setScene(scene);
             RuwanBook.getStage().show();
         } catch (Exception e) {
+        }
+    }
+    
+                @FXML
+    public void ProductDetails(){
+
+        try {
+            URL location = getClass().getResource("proTableview.fxml");
+
+            FXMLLoader fxmlLoader = new FXMLLoader();
+            fxmlLoader.setLocation(location);
+            fxmlLoader.setBuilderFactory(new JavaFXBuilderFactory());
+
+            Parent root1 = (Parent) fxmlLoader.load(location.openStream());
+            
+            proTableViewController ctr=(proTableViewController)fxmlLoader.getController();
+            
+            Scene scene = new Scene(root1);
+            
+            RuwanBook.getStage().setTitle("Product Details");
+            RuwanBook.getStage().setScene(scene);  
+
+            RuwanBook.getStage().show();
+
+        } catch (IOException ex) {
+            Logger.getLogger(SupplierController.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
 
